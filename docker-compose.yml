@@ -1,0 +1,17 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    links:
+      - "rethink:rethinkdb"
+    depends_on:
+      - rethink
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server/app:/usr/src/app
+      - ./server/public:/usr/src/public
+  rethink:
+    image: rethinkdb:latest
+    ports:
+      - "8081:8080"
