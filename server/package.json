@@ -9,6 +9,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "nodemon": "^1.18.4",
-    "rethinkdb": "^2.3.3"
+    "rethinkdb": "^2.3.3",
+    "ws": "^6.0.0"
   }
 }
